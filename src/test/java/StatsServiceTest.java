@@ -8,9 +8,9 @@ public class StatsServiceTest {
     public void shouldSumSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedSumSales = 180;
-        int actualSumSales = service.sumSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedSumSales = 180;
+        long actualSumSales = service.sumSales(sales);
 
         Assertions.assertEquals(expectedSumSales, actualSumSales);
     }
@@ -19,9 +19,9 @@ public class StatsServiceTest {
     public void shouldAverageSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        double expectedAverageSales = 15;
-        double actualAverageSales = service.averageSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedAverageSales = 15;
+        long actualAverageSales = service.averageSales(sales);
 
         Assertions.assertEquals(expectedAverageSales, actualAverageSales);
 
@@ -31,7 +31,7 @@ public class StatsServiceTest {
     public void shouldMonthMaxSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMaxMonth = 8;
         int actualMaxMonth = service.maxSales(sales);
 
@@ -42,7 +42,7 @@ public class StatsServiceTest {
     public void shouldMonthMinSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMinMonth = 9;
         int actualMinMonth = service.minSales(sales);
 
@@ -53,9 +53,9 @@ public class StatsServiceTest {
     public void shouldAmountMonthSalesAboveAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAboveMonth = 5;
-        double actualAboveMonth = service.aboveAverageSales(sales);
+        int actualAboveMonth = service.aboveAverageSales(sales);
 
         Assertions.assertEquals(expectedAboveMonth, actualAboveMonth);
 
@@ -65,9 +65,9 @@ public class StatsServiceTest {
     public void shouldAmountMonthSalesBelowAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedBelowMonth = 5;
-        double actualBelowMonth = service.belowAverageSales(sales);
+        int actualBelowMonth = service.belowAverageSales(sales);
 
         Assertions.assertEquals(expectedBelowMonth, actualBelowMonth);
 
